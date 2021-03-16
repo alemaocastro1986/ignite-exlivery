@@ -23,6 +23,7 @@ defmodule Exlivery.MixProject do
   defp deps do
     [
       {:decimal, "2.0.0"},
+      {:elixir_uuid, "~> 1.2"},
       {:ex_machina, "2.7.0", only: :test},
       {:credo, "1.5.5", only: [:dev, :test], runtime: false}
     ]

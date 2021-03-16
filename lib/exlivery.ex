@@ -1,18 +1,15 @@
 defmodule Exlivery do
-  @moduledoc """
-  Documentation for `Exlivery`.
-  """
+  alias Exlivery.Orders.Agent, as: OrderAgent
+  alias Exlivery.Users.Agent, as: UserAgent
 
-  @doc """
-  Hello world.
+  alias Exlivery.Orders.CreateOrUpdate, as: CreateOrUpdateOrder
+  alias Exlivery.Users.CreateOrUpdate, as: CreateOrUpdateUser
 
-  ## Examples
-
-      iex> Exlivery.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def start_agents do
+    UserAgent.start_link(%{})
+    OrderAgent.start_link(%{})
   end
+
+  defdelegate create_or_update_order(params), to: CreateOrUpdateOrder, as: :call
+  defdelegate create_or_update_user(params), to: CreateOrUpdateUser, as: :call
 end
