@@ -1,7 +1,6 @@
 defmodule Exlivery.Users.Item do
   use ExUnit.Case
 
-  import Exlivery.Factory
   alias Exlivery.Orders.Item
 
   describe "build/4" do
