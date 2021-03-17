@@ -3,20 +3,25 @@
 # Chapter II - Projecto Exlivery
 ## Sobre
 Trilha Elixir Ignite [Rocketseat](https://rocketseat.com.br/)  __Chapter II__ .
-<!-- TODO ajustar -->
-Este projeto tem por objetivo ler arquivos `.csv` com quantidade de registros entre 100k e 300k, com dados referentes a compras de comida por ususário, e com isso gerar reports de quantidade gasta em compras por usuário e pratos mais requisitados.
-<!-- TODO ajustar -->
+
+Este projeto tem por objetivo simular a compra de comida em delivery, criando contextos de usuários, ordens e 
+extração de relatórios de pedidos.
+
 Neste projeto foram foram aplicados os seguintes coinceitos:
-- Leitura de arquivos com `File.stream`;
-- Manipulação de dados com `Stream` e `Enum`
-- Criação e execução de Tasks em paralelo;
-- Separação de reponsabilidades;
+- Separação por contextos;
 - Pipe Operator;
 - Pattern Match;
-- Guards
-- Funções anônimas
-- Utilização do module `:timer` do Erlang para verificar performance de execução sem paralelismo e com paralelismo;
-- Tests
+- Guards;
+- Estruturas de controle `case, with`;
+- Estruturas de dados `Map, Struct, Enum`;
+- Structs com propriedades obrigatórias com `@enforce_keys`;
+- Funções com argumentos opcionais;
+- utilização de `Map` como **DTO**;
+- Facade desing pattern;
+- Funções anônimas;
+- Basico sobre a utilização de Agents;
+- Uso de bibliotecas externas para test [ExMachina](https://github.com/thoughtbot/ex_machina) ;
+- Tests;
 
 
 ## Testando
